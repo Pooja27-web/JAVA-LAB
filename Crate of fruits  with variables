@@ -1,0 +1,33 @@
+interface fruits{
+    void fruit_name();
+    void fruit_colour();
+    void fruit_price();
+    void fruit_shape();
+}
+class Apple implements fruits{
+    public void fruit_name(){
+        System.out.println("*Fruits_details*");
+        System.out.println("--------------");
+        System.out.println("Fruits_name:Apple");
+    }
+    public void fruit_colour(){
+        System.out.println("Fruits_colour:Red");
+    }
+    public void fruit_price(){
+        System.out.println("Fruits_price:100");
+    }
+    public void fruit_shape(){
+        System.out.println("Fruits_shape:Vowel");
+    }
+}
+
+
+public class Main {
+    public static void main(String[] args) {
+        Apple a =new Apple();
+        a.fruit_name();
+        a.fruit_colour();
+        a.fruit_price();
+        a.fruit_shape();
+    }
+}

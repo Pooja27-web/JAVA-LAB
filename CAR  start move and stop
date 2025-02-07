@@ -1,0 +1,27 @@
+interface Car{
+    void start();
+    void move();// interface method
+    void stop();
+}
+class Car1 implements Car {//impliment interface class
+
+    public void start() {
+        System.out.println("car is staring....!!");
+    }
+        public void move() {
+            System.out.println("car is moving....!!");
+        }
+        public void stop() {
+            System.out.println("car is stoping....!!");
+        }
+
+}
+class Main{
+    public static void main(String[]args){
+        Car1 a=new Car1();
+        a.start();
+        a.move();
+        a.stop();
+
+    }
+}

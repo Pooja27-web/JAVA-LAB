@@ -1,0 +1,18 @@
+interface blub {
+    //public abstract void start(); //abstract method
+    void start();// interface method
+}
+class blub1 implements blub { // implements interface class
+    public void start() { // normal method
+        System.out.println("Blub is glowinggg...!!!");
+    }
+
+}
+public class Main {
+    public static void main(String[] args) {
+        blub1 c=new blub1();
+        c.start();
+
+    }
+
+}

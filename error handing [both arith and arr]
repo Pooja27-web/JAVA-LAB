@@ -1,0 +1,22 @@
+
+public class Main {
+    public static void main(String[] args) {
+        try {
+            int[] array = {1, 2, 3, 4, 5};//arithematic exception
+            int div =10/0;
+            System.out.println("division:"+ div);
+            System.out.println("my array:"+array[10]);
+        }
+        catch (ArithmeticException e) {
+            System.out.println("not possible for 10/0:"+e);
+        }
+        catch (ArrayIndexOutOfBoundsException e1){
+            System.out.println("array out of the bound is 10:"+e1);
+
+        }
+        finally{
+            System.out.println("both error solved");
+        }
+    }
+
+}

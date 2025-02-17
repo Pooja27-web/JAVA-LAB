@@ -1,0 +1,26 @@
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+class InvaildAge extends Exception{ // custom exception class
+    InvaildAge(){ // custom exception constructor
+        super("Age is above 18");
+    }
+}
+
+public class Main {
+    //custom exception method
+    public static void checkAge(int age) throws InvaildAge{
+        if (age<18){
+            throw new InvaildAge();
+        }
+        else{
+            System.out.println("Age is vaild:");
+        }
+    }
+    public static void main(String[]args){
+        try{
+            checkAge(20);
+        } catch (InvaildAge e) {
+            System.out.println("Caught exception :"+e.getMessage());
+        }
+    }
+}

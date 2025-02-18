@@ -1,0 +1,32 @@
+
+// Custom Exception Class
+class CheckGender extends Exception {
+    CheckGender() {
+        super("Give valid gender");
+    }
+}
+
+public class Main {
+    // Exception Method inside Main class
+    public static void checkvalid(String gender) throws CheckGender {
+        if (gender.equals("male")) {  // Use .equals() for string comparison
+            System.out.println("Gender male is matched");
+        }
+        else if (gender.equals("female")) {  // Use .equals()
+            System.out.println("Gender female is matched");
+        }
+        else {
+            throw new CheckGender();
+        }
+    } // Properly closed checkvalid() method
+
+    public static void main(String[] args) {
+        try {
+            checkvalid("male"); // Valid input
+            checkvalid("unknown"); // This will throw an exception
+        }
+        catch (CheckGender e) {
+            System.out.println("Caught Exception: " + e.getMessage());
+        }
+    }
+}

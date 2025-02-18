@@ -1,0 +1,14 @@
+import java.util.List;
+import java.util.ArrayList;
+
+class Main {
+    public static void main(String[] args) {
+        List<String> list=new ArrayList<>(); //syntax to create list in java
+        list.add("Apple");
+        list.add("Mango");
+        list.add("kiwi");
+        list.add("strawberry");
+        list.add("orange");
+        System.out.println("List of ele");
+        System.out.println("-----");
+        System.out.println(list);

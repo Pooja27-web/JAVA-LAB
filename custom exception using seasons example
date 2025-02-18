@@ -1,0 +1,38 @@
+//custom exception using seasons
+class CheckSeasons extends Exception { //custom Exception class 1
+    CheckSeasons() {  //custom Exception constructor
+        super("please give valid month");
+    }
+}
+public class Main {
+    /// /custom Exception method -
+    public static void checkMonth(String month) throws CheckSeasons {
+        if (month == "jan" || month == "dec" || month == "feb") {
+            System.out.println("this is your's favourite winter");
+        } else if (month == "mar" || month == "arp" || month == "may") {
+            System.out.println("this is your's favourite summer");
+        } else if (month == "jun" || month == "jul" || month == "aug") {
+            System.out.println("this is your's favourite rainy");
+        } else if (month == "sep" || month == "oct" || month == "nov") {
+            System.out.println("this is your's favourite autumn");
+        } else {
+            throw new CheckSeasons();
+        }
+
+    }
+
+    public static void main(String[] args) {
+
+        try {
+            checkMonth("apr"); // Valid input
+
+        } catch (CheckSeasons e) {
+            System.out.println("Caught Exception: " + e.getMessage());
+        }
+        finally {
+            System.out.println("seasons are completed");
+        }
+    }
+}
+
+

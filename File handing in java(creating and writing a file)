@@ -1,0 +1,16 @@
+//file handling in java : writing a file
+import java.io.FileWriter;
+import java.io.IOException;
+class Main{
+    public static void main(String[]args){
+        try{
+            FileWriter java= new FileWriter("java.txt");  //syntax for creating and writng a file in java
+            java.write("java is a high level programming language");
+            java.close();
+            System.out.println("java file creation and writing is completed ");
+        }catch(IOException e){
+            System.out.println("file is not created: Error");
+            e.printStackTrace(); // to trace the error
+        }
+    }
+}

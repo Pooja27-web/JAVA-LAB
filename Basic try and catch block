@@ -1,0 +1,11 @@
+class Main {
+    public static void main(String[] args) {
+        try {
+            int a = 34 / 0;
+        }
+        catch (ArithmeticException e) {
+            System.out.println("Exception caught: " + e);
+        }
+        System.out.println("its and error");
+    }
+}

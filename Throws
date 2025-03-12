@@ -1,0 +1,16 @@
+class Throws {
+    static void mul(int c, int y) throws ArithmeticException {
+        if (y == 0) {
+            throw new ArithmeticException("Cannot divide by zero.");
+        } else {
+            System.out.println("Result: " + (c / y));
+        }
+    }
+    public static void main(String[] args) {
+        try {
+            mul(10, 0);
+        } catch (ArithmeticException e) {
+            System.out.println("Exception caught: " + e.getMessage());
+        }
+    }
+}

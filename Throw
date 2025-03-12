@@ -1,0 +1,12 @@
+class Throw {
+    static void checkNum(int age) {
+        if (age < 34) {
+            throw new IllegalArgumentException("Age must be 34 or above.");
+        } else {
+            System.out.println("Procced");
+        }
+    }
+    public static void main(String[] args) {
+        checkNum(20);
+    }
+}

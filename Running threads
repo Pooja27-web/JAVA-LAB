@@ -1,0 +1,22 @@
+class Run extends Thread{
+    public void running() {
+        for(int i=1;i<5;i++) {
+            System.out.println("Running"+i);
+            try{
+                Thread.sleep(5000);
+            }
+            catch(InterruptedException e){
+                e.printStackTrace();
+
+            }
+        }
+
+    }
+}
+class Running_threads{
+    public static void main(String[] args){
+        Run r = new Run();
+        r.start();
+        r.running();
+    }
+}
